@@ -3,18 +3,39 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Naiha 💖 Be My Valentine</title>
+<style>
+body {
+  background: linear-gradient(#ffb6c1, #ffcce0);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 60px;
+}
+button {
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+#content {
+  display: none;
+}
+</style>
 </head>
 
 <body>
 
-<div id="content" style="display:none;">
+<div id="content">
   <h1>💌 Naiha, will you be my Valentine? 💌</h1>
   <p>You are my favourite person and my favourite troublemaker 😘</p>
-  <button onclick="alert('YAY!!! Naiha said YES 😍❤️')">Yes 💖</button>
+
+  <button onclick="alert('YAY!!! Naiha said YES 😍❤️ I love you sooo much!')">
+    Yes 💖
+  </button>
 </div>
 
 <script>
-let password = prompt("🔐 Enter our secret password Naiha 💕");
+const password = prompt("🔐 Enter our secret password Naiha 💕");
 
 if (password === "1") {
   document.getElementById("content").style.display = "block";
@@ -25,5 +46,3 @@ if (password === "1") {
 
 </body>
 </html>
-
-
