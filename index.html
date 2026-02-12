@@ -3,64 +3,26 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Naiha 💖 Be My Valentine</title>
-<style>
-body {
-  background: linear-gradient(#ffb6c1, #ffcce0);
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding-top: 60px;
-  overflow: hidden;
-}
-h1 {
-  font-size: 30px;
-  color: #b30059;
-}
-p {
-  font-size: 18px;
-  color: #800040;
-}
-button {
-  font-size: 22px;
-  padding: 15px 35px;
-  border: none;
-  border-radius: 40px;
-  margin: 12px;
-  cursor: pointer;
-  position: relative;
-}
-#yes {
-  background: red;
-  color: white;
-}
-#no {
-  background: white;
-  color: red;
-  position: absolute;
-}
-</style>
 </head>
 
 <body>
 
-<h1>💌 Naiha, will you be my Valentine? 💌</h1>
-<p>You are my favourite person and my favourite troublemaker 😘</p>
-
-<button id="yes" onclick="alert('YAY!!! Naiha said YES 😍❤️ I love you soooo much!')">
-Yes 💖
-</button>
-
-<button id="no">No 😈</button>
+<div id="content" style="display:none;">
+  <h1>💌 Naiha, will you be my Valentine? 💌</h1>
+  <p>You are my favourite person and my favourite troublemaker 😘</p>
+  <button onclick="alert('YAY!!! Naiha said YES 😍❤️')">Yes 💖</button>
+</div>
 
 <script>
-const noButton = document.getElementById("no");
+let password = prompt("🔐 Enter our secret password Naiha 💕");
 
-noButton.addEventListener("mouseover", () => {
-  const x = Math.random() * (window.innerWidth - 100);
-  const y = Math.random() * (window.innerHeight - 100);
-  noButton.style.left = x + "px";
-  noButton.style.top = y + "px";
-});
+if (password === "letmein") {
+  document.getElementById("content").style.display = "block";
+} else {
+  document.body.innerHTML = "<h2>Wrong password 😏 Ask your husband for the secret!</h2>";
+}
 </script>
 
 </body>
 </html>
+
